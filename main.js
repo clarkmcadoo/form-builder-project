@@ -108,13 +108,16 @@ function buildForm(formArray) {
     }
   }
 }
-
+//<i class="fa fa-camera-retro fa-lg"></i> fa-lg
 function createInput(config, parent) {
   var formInput = document.createElement("input");
   formInput.setAttribute("type", config.type);
   formInput.setAttribute("placeholder", config.label);
   formInput.setAttribute("id", config.id);
   parent.appendChild(formInput);
+  var frontIcon = document.createElement("i");
+  frontIcon.setAttribute("class", "fa " + config.icon + " fa-fw");
+  formInput.appendChild(frontIcon);
 }
 
 function createTextArea(config, parent) {
@@ -148,5 +151,3 @@ function buildSubmitButton(text) {
   mainBody.appendChild(submitButton);
 }
 buildSubmitButton("Submit Button");
-
-
